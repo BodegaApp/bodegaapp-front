@@ -13,6 +13,10 @@ import { StoreRegisterComponent } from './pages/store-register/store-register.co
 
 import { GoogleMapsModule } from '@angular/google-maps'
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +29,16 @@ import { GoogleMapsModule } from '@angular/google-maps'
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [
+    { provide: BUCKET, useValue: `salesapp-5d475.appspot.com/imagenes` }
+   //https://firebasestorage.googleapis.com/v0/b/salesapp-5d475.appspot.com/o?name=name-your-file-path-here
+   //https://firebasestorage.googleapis.com/v0/b/salesapp-5d475.appspot.com%2Fimagenes%2F/o?name=name-your-file-path-here
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

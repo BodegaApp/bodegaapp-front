@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "salesapp-5d475": {
+      "hosting": {
+        "bodegaapp-frontend": [
+          "salesapp-5d475"
+        ]
+      }
+    }
+  }
+}

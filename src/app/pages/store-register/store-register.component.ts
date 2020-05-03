@@ -6,6 +6,8 @@ import { StoreCategory } from '../../_model/storeCategory';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
+import { AngularFireStorage } from '@angular/fire/storage';
+
 @Component({
   selector: 'app-store-register',
   templateUrl: './store-register.component.html',
@@ -36,7 +38,13 @@ export class StoreRegisterComponent implements OnInit {
   categorySelected: StoreCategory;
   filteredOptionsCategories: Observable<any[]>;
 
-  constructor(private storeCategoryService: StoreCategoryService) { }
+  constructor(private storeCategoryService: StoreCategoryService, private storage: AngularFireStorage) { }
+
+  uploadFile(event) {
+    const file = event.target.files[0];
+    const filePath = 'name-your-file-path-here';
+    const task = this.storage.upload(filePath, file);
+  }
 
   ngOnInit(): void {
     this.initMap();
