@@ -6,4 +6,8 @@
   .example-container > * {
     width: 100%;
   }
-  
+  .box {         
+    
+    padding:10px;
+   
+ }

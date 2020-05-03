@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
+import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import {MatIconModule} from '@angular/material/icon'
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
 
 @NgModule({
     imports: [ 
@@ -16,15 +19,20 @@ import {MatIconModule} from '@angular/material/icon'
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
-        MatSlideToggleModule,
-        MatIconModule
+        MatCheckboxModule,
+        MatIconModule,
+        MatButtonModule,
+        MatAutocompleteModule
+        
     ],
     exports: [
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
-        MatSlideToggleModule,
-        MatIconModule
+        MatCheckboxModule,
+        MatIconModule,
+        MatButtonModule,
+        MatAutocompleteModule
     ],
     providers: [
     ],
