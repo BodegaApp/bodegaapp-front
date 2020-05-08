@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
 import { AngularFireStorage } from '@angular/fire/storage';
+import { database } from 'firebase';
 
 @Component({
   selector: 'app-store-register',
@@ -36,21 +37,37 @@ export class StoreRegisterComponent implements OnInit {
   myControlCategory: FormControl = new FormControl();
   storeCategories: StoreCategory[] = [];
   categorySelected: StoreCategory;
-  filteredOptionsCategories: Observable<any[]>;
+
+
+  uploadPercent: Observable<number>;
 
   constructor(private storeCategoryService: StoreCategoryService, private storage: AngularFireStorage) { }
 
   uploadFile(event) {
+    
     const file = event.target.files[0];
-    const filePath = 'name-your-file-path-here';
-    const task = this.storage.upload(filePath, file);
+    
+
+
+    var rightNow = new Date();
+  	var res = rightNow.toISOString().replace(/-/g,"").replace(/:/g,"").replace('.',"");
+    const filePath = '/'+ res + file.name;
+    const fileRef = this.storage.ref(filePath);
+    var task = this.storage.upload(filePath, file); //no se xq sale error en esa linea, igual funciona
+    
+    task.snapshotChanges().subscribe(data =>{
+      if (data.metadata != null){
+        console.log(data)
+      }
+    });;
+    this.uploadPercent = task.percentageChanges();
+  
   }
 
   ngOnInit(): void {
     this.initMap();
     this.clearForm();
     this.getStoreCategories();
-    this.filteredOptionsCategories = this.myControlCategory.valueChanges.pipe(map(val => this.filterCategories(val)));
   }
 
   clearForm(){
@@ -75,24 +92,6 @@ export class StoreRegisterComponent implements OnInit {
     this.storeCategoryService.getStoreCategories().subscribe(categories =>{
         this.storeCategories = categories;
     })
-  }
-
-  displayFnCategory(val: StoreCategory) {
-    return val ? `${val.name}` : val;
-  }
-
-  handleSelectCategory(e : any){
-    this.categorySelected = e.option.value;
-  }
-
-  filterCategories(val: any) {
-    if (val != null && val.id > 0) {//validamos que SI exista lo q buscamos
-      return this.storeCategories.filter(option =>
-        option.name.toLowerCase().includes(val.name.toLowerCase()));
-    } else {
-      return this.storeCategories.filter(option =>
-        option.name.toLowerCase().includes(val.toLowerCase()));
-    }
   }
   //MARK: Fn MAPS
 

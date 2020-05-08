@@ -1,13 +1,45 @@
-.example-container {
-    display: flex;
-    flex-direction: column;
+
+  body{
+    background-color: whitesmoke;
   }
-  
   .example-container > * {
     width: 100%;
   }
-  .box {         
-    
-    padding:10px;
+  .example-full-width{
+    width: 100%;
+  }
+  .child-50percent{
+    max-width: 50%;
+  }
+  form.example-container {         
+
+    padding:20px;
+    margin: 10px;
    
  }
+
+ .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 8px;
+  padding: 16px 16px;
+  margin: 16px;
+}
+
+/* .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+} */
+
+.card-container {
+ 
+}
+
+.infoAditional{
+  padding:10px;
+  margin: 10px;
+  min-height: 300px;
+}

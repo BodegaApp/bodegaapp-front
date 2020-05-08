@@ -17,6 +17,7 @@
     "@angular/compiler": "~9.1.0",
     "@angular/core": "~9.1.0",
     "@angular/fire": "^6.0.0",
+    "@angular/flex-layout": "^9.0.0-beta.29",
     "@angular/forms": "~9.1.0",
     "@angular/google-maps": "^9.2.2",
     "@angular/material": "^9.2.2",
@@ -54,7 +55,6 @@
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
   },
-  
   "engines": {
     "node": ">= 12.0.0",
     "npm": ">= 6.13.7"

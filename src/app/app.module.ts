@@ -16,14 +16,19 @@ import { GoogleMapsModule } from '@angular/google-maps'
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
+import { MainComponent } from './pages/main/main.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StoreRegisterComponent
+    StoreRegisterComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
@@ -31,12 +36,11 @@ import { environment } from '../environments/environment';
     FormsModule,
     GoogleMapsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatCardModule
   ],
   providers: [
-    { provide: BUCKET, useValue: `salesapp-5d475.appspot.com/imagenes` }
-   //https://firebasestorage.googleapis.com/v0/b/salesapp-5d475.appspot.com/o?name=name-your-file-path-here
-   //https://firebasestorage.googleapis.com/v0/b/salesapp-5d475.appspot.com%2Fimagenes%2F/o?name=name-your-file-path-here
+    //{ provide: BUCKET, useValue: `salesapp-5d475.appspot.com/` }
 
   ],
   bootstrap: [AppComponent]
