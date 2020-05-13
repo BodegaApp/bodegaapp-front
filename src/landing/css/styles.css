@@ -1,0 +1,448 @@
+*{
+	margin:0;
+	padding:0; 
+    border: 0;
+}
+*:focus {
+    outline: none;
+} 
+#close-toggle:focus {
+    outline: transparent;
+}
+a:hover{
+    text-decoration: none !important;
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto-Bold.woff') format('woff');
+}
+header a.menu-txt {
+    font-family: 'Roboto Regular';
+    font-style: normal;
+    font-weight: normal;
+    color: #FFF !important;
+    padding: 16px 0px !important;
+    font-size: 16px !important;
+    margin-right: 30px;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../img/bars.svg") !important;
+    width: 30px;
+}
+ .menupadre{
+    top: 7px;
+    right: 0px;
+    position: absolute;
+    border: none;
+  }
+.menupadre .ico_nav{
+  color: #fff;
+  font-family: 'FontAwesome';
+  font-size: 24px;
+}
+#close-toggle{
+    color: white;
+    border: none;
+}
+.navbarfixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} 
+.paddinglogo{
+    padding-top: 25px !important;
+}
+.micuenta{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 16px 20px !important;
+    color: #FF993B !important;
+    font-size: 16px !important;
+    -webkit-transition: color, 1s ease;
+    -moz-transition: color, 1s ease;
+    -ms-transition: color, 1s ease;
+    -o-transition: color, 1s ease;
+    transition: color, 1s ease;
+}
+.micuenta:hover{
+    background: #F8F8FF;
+    color: #FDB676 !important; 
+}
+#close-toggle{
+    display: none !important;
+}
+#close-x,
+.tiendas-menu{
+    display: none;
+}
+.home {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+.home:after{
+    content: '';
+    display: block;
+    height: 100%;
+    background: url(../img/franja.svg) bottom no-repeat;
+    position: absolute;
+    bottom: -3px;
+    left: -1px;
+    right: 0;
+    z-index: 101;
+}
+.bg-bruno{
+    height: 631px; 
+    padding-top: 107px;
+    background: #3AE1F8;
+}
+.fixed-top{
+    padding: 14px;
+} 
+.bg-nav{
+    background: #3AE1F8;
+}
+.logotienda{
+    width: 150px;
+    float: left;
+    margin-right: 27px;
+} 
+.title-h1{
+    font-family: 'Roboto Regular';
+    font-size: 44px;
+    line-height: 52px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    display: inline-block;
+    margin-top: 65px;
+}
+
+.title-h1 strong{
+    font-family: 'Roboto Bold';
+}
+
+.description-descarga{
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: 'Roboto Regular';
+    margin-bottom: 32px;
+}
+.photo-header{
+    z-index: 200;
+}
+.phone img{
+    position: relative;
+}
+.title-go{
+    color: #2E384D;
+    font-size: 36px;
+    line-height: 40px;
+    font-family: 'Roboto Regular';
+}
+.title-go strong{
+    font-family: 'Roboto Bold';
+}
+.description-go{
+    font-family: 'Roboto Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #2E384D;
+    padding-right: 8px;
+}
+.description-go strong{
+    font-family: 'Roboto Bold';
+}
+.title-dudas{
+    font-family: 'Roboto Regular';
+    font-size: 36px;
+    line-height: 40px;
+    color: #2E384D;
+    padding-top: 15px;
+}
+.bg-light-drak{
+    background-color:#F8F8FF;
+    padding: 4em 0px;
+ }
+.card-header{
+    padding: 20px 0px !important;
+    background: transparent !important;
+    border-top: 1px solid #E5E5ED;
+    border-bottom: 0px !important;
+}
+#faq .card-body{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #69707F;
+    padding: 0px 0px 15px;
+} 
+#faq .description-go i{
+    float: right;
+    color: #FF993B;
+}
+footer{
+    background-color: #2E384D;
+    color: white;
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 48px 0px 77px 0px;
+    font-weight: 100;
+}
+.description-footer{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color:#fff;
+}
+.card-header a:not(.collapsed) .rotate-icon {
+    transform: rotate(180deg);
+}
+.card{
+     background: none !important;
+     border: none !important;
+ }
+ 
+.logotipo{
+	float: left;
+	width: 103px;
+    padding-top: 85px;
+    padding-left: 5px;
+
+}
+a.nav-link{
+	color: #4A4A4A;
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+.navbar-light .navbar-nav .nav-link:focus{
+    color: #FFF; 
+} 
+ #beneficios {
+        margin-top: 50px;
+     }
+ .bloque{
+    display: inherit;
+ }
+@media only screen and (max-width: 1199px){
+.phone img {
+    position: relative;
+    top: -276px;
+    left: 458px;
+}
+}
+@media only screen and (max-width: 991px){
+     .phone img { 
+        top: -220px;
+        left: 257px; 
+    }
+    .logotipo{
+        padding-top: 130px;
+        padding-left: 18px;
+    }
+    .title-h1{
+         font-size: 40px;
+        line-height: 48px; 
+        margin-top: 110px;
+     }
+     .navbar-nav{
+        -webkit-flex-direction: row !important;
+        -moz-flex-direction: row !important;
+        -ms-flex-direction: row !important;
+        -o-flex-direction: row !important;
+       flex-direction: row !important;
+     }
+     #beneficios {
+        margin-top: 170px;
+     }
+      .title-go{
+        font-size: 28px;
+        line-height: 32px; 
+    }
+    .description-go{
+        font-size: 18px;
+        line-height: 28px; 
+    }
+}
+@media only screen and (min-width: 768px){
+.navbar-collapse.collapse{
+    display: block !important;
+}
+}
+ 
+@media only screen and (max-width: 767px){
+   #navbarNav.open {
+        overflow-y: scroll;
+        overflow-x: hidden; 
+        height: 100%;
+        display: block;
+        width: 100%;
+    }
+    .collapse{
+        display: none;
+    }
+    img#close-x {
+        margin-right: 15px;
+        display: inline-block;
+        margin-top: 15px;
+        float: right;
+    }
+    #close-toggle{
+        display: block !important;
+    }
+    #navbarNav{
+        min-height: 100%;
+        background: #FFF;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-bottom: 50px;
+    }
+    .tiendas-menu{
+        display: grid;
+        text-align: center;
+    }
+    .tiendas-menu .logotienda{
+         width: 192px;
+        margin-bottom: 21px;
+    }
+    .navbar-nav{
+        display: block !important;
+        margin-top: 70px;
+    }
+    header a.menu-txt{
+        color: #3AE1F8 !important;
+        font-size: 20px !important;
+        line-height: 12px;
+        margin-right: 0px;
+        text-align: center;
+        padding-bottom: 40px !important;
+        font-weight: bold;
+    }
+    .micuenta {
+        width: 112px;
+        height: 44px;
+        line-height: 12px;
+        padding: 15px 16px !important;
+        font-size: 16px !important;
+        margin: 0 auto;
+        background-color: #FF993B;
+        color: #FFF !important;
+        margin-bottom: 73px;
+    }
+    .bg-bruno {
+        height: 450px;
+    }
+    .home:after{
+        background: none;
+    }
+    .phone img { 
+       top: 30px;
+        left: 0;
+        position: inherit;
+    }
+    
+   .logotipo {
+        padding-left: 0;
+        width: 103px;
+        margin: 0 auto; 
+        float: none;
+        display: block;
+    }
+    .title-h1 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 8px;
+        text-align: center;
+        margin-bottom: 16px;
+        display: block;
+    }
+    .description-descarga {
+        font-size: 14px;
+        line-height: 20px; 
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .tiendas{
+        text-align: center;
+    }
+    .logotienda {
+        width: 116px;
+        float: none;
+        margin: 0 6px;
+    }
+    .title-go{
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .description-go{
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .bloque {
+        display: grid;
+    }
+    #beneficios {
+        margin-top: 25%;
+    }
+    .title-dudas{
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 36px;
+    }
+    #faq .description-go{
+        text-align: left; 
+        padding-right: 10px;
+    }
+    footer {
+        padding: 32px;
+    }
+    .paddinglogo {
+        padding-top: 5px !important;
+        float: left !important;
+        position: relative;
+    }
+    .bg-light-drak { 
+        padding: 60px 0 32px;
+        margin-top: 48px;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    #beneficios {
+       margin-top: 50%;
+    }
+     .bg-bruno {
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+     .bg-bruno {
+        height: 400px;
+    }
+    #beneficios {
+        margin-top: 55%;
+    }
+}
